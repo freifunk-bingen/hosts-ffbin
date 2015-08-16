@@ -1,0 +1,33 @@
+$ORIGIN 0.0.0.0.e.1.b.4.c.d.4.b.7.3.d.f.ip6.arpa.
+; BIND data file for zone .ffbin
+;
+$TTL    600
+@       IN      SOA     mettbroetchen.ffbin. hostmaster.ffbin. (
+                     2015081600         ; Serial
+                         172800         ; Refresh
+                           3600         ; Retry
+                        1209600         ; Expire
+                           3600 )       ; Negative Cache TTL
+;
+@       IN      NS      mettbroetchen.ffbin.
+@       IN      NS      wasserfloh.ffmz.org.
+@       IN      NS      spinat.ffmz.org.
+@       IN      NS      lotuswurzel.ffmz.org.
+@       IN      NS      kaschu.ffmz.org.
+
+1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0 PTR     nextnode.ffbin.
+7.0.0.0.5.2.a.0.0.0.0.0.0.0.0.0 PTR     spinat.ffmz.org.
+7.1.0.0.5.2.a.0.0.0.0.0.0.0.0.0 PTR     lotuswurzel.ffmz.org.
+a.2.0.0.5.2.a.0.0.0.0.0.0.0.0.0 PTR     parmesan.ffmz.org.
+0.d.0.0.5.2.a.0.0.0.0.0.0.0.0.0 PTR     kaschu.ffmz.org.
+7.e.0.0.5.2.a.0.0.0.0.0.0.0.0.0 PTR     wasserfloh.ffmz.org.
+3.0.1.0.5.2.a.0.0.0.0.0.0.0.0.0 PTR     aubergine.ffmz.org.
+
+; user
+9.3.a.d.7.c.e.f.f.f.0.0.4.5.0.5 PTR     tracker.faultier.user.ffmz.org.
+
+
+; freifunk bingen
+c.0.1.0.5.2.a.0.0.0.0.0.0.0.0.0 PTR     mettbroetchen.ffbin.
+
+
