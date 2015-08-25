@@ -18,14 +18,21 @@
 ##
 
 server {
-	listen [fd37:b4dc:4b1e::a25:10c]:80 ipv6only=off;
-	listen 10.37.1.12:80;
-
-	root /usr/share/nginx/firmware;
-	index index.html index.html;
-
+	listen [fd37:b4dc:4b1e::a25:10c]:443 ipv6only=off;
+	listen 10.37.1.12:443;
 	# Make site accessible from http://localhost/
-	server_name firmware.ffbin;
+	server_name register.userhost.ffbin;
+
+	# SSL-Settings
+	ssl on;
+        ssl_certificate /etc/ssl/certs/register.userhost.ffbin.cert;
+        ssl_certificate_key /etc/ssl/private/register.userhost.ffbin.key;
+        fastcgi_param   HTTPS               on;
+        fastcgi_param   HTTP_SCHEME         https;
+	
+	root /usr/share/nginx/ddns;
+	index index.html index.html index.php;
+
 
 	location / {
 		# First attempt to serve request as file, then

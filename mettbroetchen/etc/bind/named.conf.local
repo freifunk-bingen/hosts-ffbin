@@ -20,12 +20,24 @@ masters "ns-masters-ffmz" {
 	fd37:b4dc:4b1e::a25:103;
 };
 
-
+//
 // freifunk bingen
 zone "ffbin." {
 	type master;
 	file "/etc/bind/ffbin/ffbin.master.db";
 };
+// userhosts.ffbin
+zone "userhost.ffbin." {
+	type master;
+	file "/etc/bind/ffbin/userhost.ffbin.master.db";
+	update-policy {
+		  deny * name register.userhost.ffbin ANY;
+		  grant ddns-update-key wildcard *.userhost.ffbin A AAAA;
+	};
+
+};
+
+//
 
 // Intern Zones for Freifunk
 

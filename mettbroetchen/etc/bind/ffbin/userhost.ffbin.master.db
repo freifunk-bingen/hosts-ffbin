@@ -1,0 +1,22 @@
+$ORIGIN userhost.ffbin.
+; BIND data file for zone ffbin.
+;
+$TTL    600
+@       IN      SOA     mettbroetchen.ffbin. hostmaster.ffbin. (
+                     2015082402        ; Serial
+		         86400         ; Refresh 2d
+                          1200         ; Retry 15min
+		          86400     ; Expire 1d
+                           600         ; Negative Cache TTL
+			)
+
+; internal ns server
+@       		IN      NS      mettbroetchen.ffbin.
+
+@			IN	A	10.37.1.12
+@			IN	AAAA	fd37:b4dc:4b1e::a25:10c
+
+; registry-host
+register		IN	A	10.37.1.12
+register		IN	AAAA	fd37:b4dc:4b1e::a25:10c
+

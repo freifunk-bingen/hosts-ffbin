@@ -3,10 +3,10 @@ $ORIGIN ffbin.
 ;
 $TTL    600
 @       IN      SOA     mettbroetchen.ffbin. hostmaster.ffbin. (
-                     2015081600         ; Serial
-		         172800         ; Refresh 2d
-                            900         ; Retry 15min
-		          86400     ; Expire 1d
+                     2015082404         ; Serial
+		        1728000         ; Refresh 2d
+                           7200         ; Retry 15min
+		          86400         ; Expire 1d
                            3600         ; Negative Cache TTL
 			)
 
@@ -15,6 +15,8 @@ $TTL    600
 
 @			IN	A	10.37.1.12
 @			IN	AAAA	fd37:b4dc:4b1e::a25:10c
+userhost.ffbin.		IN	NS	mettbroetchen.ffbin.
+
 
 ; next-node
 nextnode		IN	A	10.37.0.1
@@ -28,6 +30,5 @@ mettbroetchen		IN	AAAA	fd37:b4dc:4b1e::a25:10c
 0.ntp           	IN      CNAME   mettbroetchen
 
 ; firmware mirrors
-firmware		IN	A	10.37.1.12
-firmware		IN	AAAA	fd37:b4dc:4b1e::a25:10c
+firmware		IN	CNAME	mettbroetchen
 
